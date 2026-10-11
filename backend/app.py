@@ -55,6 +55,12 @@ Do not invent facts, citations, publishers, URLs, or statistics.
 Do not claim you searched the web.
 If the claim cannot be verified from available information, say so.
 Make clear this is AI-assisted analysis, not a confirmed fact-check.
+Begin your answer with one line starting with "Assessment:" followed by exactly one of these labels:
+- Widely established by scientific evidence
+- Contradicted by scientific evidence
+- Unverified or disputed
+Use the first two labels only when scientific or expert consensus is overwhelming. For health, political or breaking-news claims, use "Unverified or disputed" unless the evidence is clear.
+After the Assessment line, explain the supporting evidence, warning signs and missing context.
 """
 
     try:
