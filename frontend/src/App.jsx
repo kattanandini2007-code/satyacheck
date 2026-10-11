@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
 
 function App() {
   const [claim, setClaim] = useState("");
@@ -19,7 +20,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/analyze", {
+      const response = await fetch(`${API_URL}/api/analyze`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
