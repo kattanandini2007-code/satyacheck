@@ -189,6 +189,13 @@ function App() {
       "The investigation has returned a result."}
   </ReactMarkdown>
 </div>
+<p className="official-note">
+  For news or government-related claims, also check official sources such as{" "}
+  <a href="https://pib.gov.in" target="_blank" rel="noreferrer">
+    PIB (pib.gov.in)
+  </a>{" "}
+  or the relevant ministry's website.
+</p>
 
               {result.sources?.length > 0 && (
                 <div className="sources">

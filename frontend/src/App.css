@@ -326,3 +326,10 @@ footer span {
     gap: 12px;
   }
 }
+.official-note {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-left: 4px solid #1f7a63;
+  background: rgba(31, 122, 99, 0.08);
+  font-size: 0.95rem;
+}
