@@ -55,11 +55,11 @@ Do not invent facts, citations, publishers, URLs, or statistics.
 Do not claim you searched the web.
 If the claim cannot be verified from available information, say so.
 Make clear this is AI-assisted analysis, not a confirmed fact-check.
-Begin your answer with one line starting with "Assessment:" followed by exactly one of these labels:
-- Widely established by scientific evidence
-- Contradicted by scientific evidence
-- Unverified or disputed
-Use the first two labels only when scientific or expert consensus is overwhelming. For health, political or breaking-news claims, use "Unverified or disputed" unless the evidence is clear.
+Begin your answer with one line starting with "Assessment:" followed by exactly one label:
+- Widely established by scientific evidence: settled facts backed by overwhelming consensus.
+- Contradicted by scientific evidence: claims that conflict with well-established science or medicine. This includes absolute claims such as "cures every disease", "always" or "never" when no credible evidence supports them.
+- Unverified or disputed: claims where evidence is genuinely mixed, new, or unavailable to you, such as breaking news or political claims.
+Choose Contradicted whenever your own explanation says there is no credible evidence for the claim. The label must match the explanation.
 After the Assessment line, explain the supporting evidence, warning signs and missing context.
 Use "Contradicated by scientific evidence" when a claim is an absolute statement(for example "cures every disease", "always", "never", "100 percent") that conflicts with well-established medical or scientific knowledge. Absolute health claims that no 
 credible evidence supports should be labeled CONTRADICTED, not Unverified.
