@@ -3,10 +3,21 @@ import requests
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from dotenv import load_dotenv
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 load_dotenv()
 
 app = Flask(__name__)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1)
+
+limiter = Limiter(
+    get_remote_address,
+    app=app,
+    default_limits=[],
+    storage_uri="memory://",
+)
 CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5173", os.getenv("FRONTEND_URL", "")])
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
@@ -22,6 +33,7 @@ def health():
 
 
 @app.post("/api/analyze")
+@limiter.limit("5 per minute; 60 per day")
 def analyze():
     data = request.get_json(silent=True) or {}
     claim = str(data.get("claim", "")).strip()
@@ -120,6 +132,8 @@ For breaking-news claims, suggest checking official sources such as PIB Fact Che
             "sources": [],
         }), 502
 
-
+@app.errorhandler(429)
+def too_many_requests(e):
+    return jsonify({"error": "Too many requests. Please wait a minute and try again."}), 429
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
