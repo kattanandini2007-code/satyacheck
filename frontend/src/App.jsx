@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { useState } from "react";
 import "./App.css";
 const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
@@ -181,11 +182,13 @@ function App() {
 
             <div className="result-card">
               <h3>{result.status || "Analysis complete"}</h3>
-              <p>
-                {result.explanation ||
-                  result.message ||
-                  "The investigation has returned a result."}
-              </p>
+              <div className="report-text">
+  <ReactMarkdown>
+    {result.explanation ||
+      result.message ||
+      "The investigation has returned a result."}
+  </ReactMarkdown>
+</div>
 
               {result.sources?.length > 0 && (
                 <div className="sources">
