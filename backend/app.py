@@ -61,6 +61,8 @@ Begin your answer with one line starting with "Assessment:" followed by exactly 
 - Unverified or disputed
 Use the first two labels only when scientific or expert consensus is overwhelming. For health, political or breaking-news claims, use "Unverified or disputed" unless the evidence is clear.
 After the Assessment line, explain the supporting evidence, warning signs and missing context.
+Use "Contradicated by scientific evidence" when a claim is an absolute statement(for example "cures every disease", "always", "never", "100 percent") that conflicts with well-established medical or scientific knowledge. Absolute health claims that no 
+credible evidence supports should be labeled CONTRADICTED, not Unverified.
 """
 
     try:
